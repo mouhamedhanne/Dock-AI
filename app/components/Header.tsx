@@ -3,6 +3,7 @@ import Link from "next/link";
 //  "Quickly find your next designer",
 //"Post a job"
 // "The 1# job board for design talent",
+// test
 
 const MENU_ITEMS = [
   "Find designer",
