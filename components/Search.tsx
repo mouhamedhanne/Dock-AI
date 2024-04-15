@@ -113,15 +113,27 @@ export function SearchHero() {
         <div className="flex justify-center space-x-4">
           <Button variant="ghost" className="border border-input">
             Marketing
+            <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
+              23
+            </span>
           </Button>
           <Button variant="ghost" className="border border-input">
-            Photos et videos
+            Création de contenu
+            <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
+              23
+            </span>
           </Button>
           <Button variant="ghost" className="border border-input">
-            Copywriting
+            Productivité
+            <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
+              23
+            </span>
           </Button>
           <Button variant="ghost" className="border border-input">
-            Design
+            Développement
+            <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
+              23
+            </span>
           </Button>
         </div>
       </div>
