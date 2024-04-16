@@ -6,7 +6,6 @@ export default function page() {
   return (
     <div>
       <Header />
-
       <div className="px-6 ">
         <Herotop />
       </div>

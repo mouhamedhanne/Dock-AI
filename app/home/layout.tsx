@@ -7,20 +7,6 @@ export default function Layout({ children }: any) {
     <div>
       <Header />
 
-      <div className="px-6 ">
-        <Herotop />
-      </div>
-      <div className="flex space-x-4 px-6">
-        <div>
-          <Link href="home/vedette">En Vedette</Link>
-        </div>
-        <div>
-          <Link href="home/popular">Populaire</Link>
-        </div>
-        <div>
-          <Link href="/">New</Link>
-        </div>
-      </div>
       {children}
     </div>
   );
