@@ -1,0 +1,99 @@
+[
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "ChatGPT",
+    "image": "/ia/chatgpt.svg",
+    "description": "Revolutionize interaction, creativity, and innovation with the leader in AI.",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "Namelix",
+    "image": "/ia/namelix.svg",
+    "description": "AI-driven, generates memorable, brandable business names...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "Fliki",
+    "image": "/ia/fliki.svg",
+    "description": "Create videos from blog posts in 2 mins",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "Tome",
+    "image": "/ia/tome.svg",
+    "description": "Unlock your best work with AI-powered generative storytelling",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "",
+    "name": "Codeium",
+    "image": "/ia/codeium.svg",
+    "description": "Elevate coding with AI-driven code completion, chat assistance, and",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "",
+    "name": "Midjourney",
+    "image": "/ia/midjourney.svg",
+    "description": "Unlock digital artistry: AI transforms text into stunning visuals, seamless...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "Piggy",
+    "image": "/ia/piggy.svg",
+    "description": "Transforming mobile content creation with AI-driven...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "Humata AI",
+    "image": "/ia/humata.jpg",
+    "description": "ChatGPT for your files.",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "Durable",
+    "image": "/ia/durable.png",
+    "description": "Revolutionize Your Business with AI Efficiency",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "Looka",
+    "image": "/ia/looka.png",
+    "description": "AI-driven branding: logos, websites, and full identity kits.",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": "Popular",
+    "hastag": "",
+    "name": "GPTGO",
+    "image": "/ia/gptgo.png",
+    "description": "Unleash AI's power: intuitive, customizable, content-to-code...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  }
+]

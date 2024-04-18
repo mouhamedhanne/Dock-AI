@@ -37,7 +37,7 @@ export default function Tabs() {
 
   return (
     <div>
-      <div className="flex">
+      <div className="flex justify-center">
         <Tab
           label="popular"
           isActive={activeTab === "popular"}
