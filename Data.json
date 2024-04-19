@@ -1,7 +1,8 @@
 [
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular"],
+    "topics": ["Code", "Text"],
+    "hastag": "#code #textgeneration",
     "name": "ChatGPT",
     "image": "/ia/chatgpt.svg",
     "description": "Revolutionize interaction, creativity, and innovation with the leader in AI.",
@@ -9,8 +10,9 @@
     "link": "https://github.com"
   },
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular"],
+    "topics": ["Code", "Text"],
+    "hastag": "#code #textgeneration",
     "name": "Namelix",
     "image": "/ia/namelix.svg",
     "description": "AI-driven, generates memorable, brandable business names...",
@@ -18,8 +20,9 @@
     "link": "https://github.com"
   },
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular"],
+    "topics": ["Design"],
+    "hastag": "#code #textgeneration",
     "name": "Fliki",
     "image": "/ia/fliki.svg",
     "description": "Create videos from blog posts in 2 mins",
@@ -27,8 +30,9 @@
     "link": "https://github.com"
   },
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular"],
+    "topics": ["Marketing"],
+    "hastag": "#code #textgeneration",
     "name": "Tome",
     "image": "/ia/tome.svg",
     "description": "Unlock your best work with AI-powered generative storytelling",
@@ -36,7 +40,9 @@
     "link": "https://github.com"
   },
   {
-    "category": "",
+    "category": ["popular"],
+    "topics": ["Marketing"],
+    "hastag": "#code #textgeneration",
     "name": "Codeium",
     "image": "/ia/codeium.svg",
     "description": "Elevate coding with AI-driven code completion, chat assistance, and",
@@ -44,16 +50,18 @@
     "link": "https://github.com"
   },
   {
-    "category": "",
+    "category": ["popular"],
+    "topics": ["Code"],
     "name": "Midjourney",
+    "hastag": "#code #textgeneration",
     "image": "/ia/midjourney.svg",
     "description": "Unlock digital artistry: AI transforms text into stunning visuals, seamless...",
     "pricing": "Free",
     "link": "https://github.com"
   },
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular"],
+    "hastag": "#code #textgeneration",
     "name": "Piggy",
     "image": "/ia/piggy.svg",
     "description": "Transforming mobile content creation with AI-driven...",
@@ -61,8 +69,8 @@
     "link": "https://github.com"
   },
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular", "featured"],
+    "hastag": "#code #textgeneration",
     "name": "Humata AI",
     "image": "/ia/humata.jpg",
     "description": "ChatGPT for your files.",
@@ -70,8 +78,8 @@
     "link": "https://github.com"
   },
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular"],
+    "hastag": "#code #textgeneration",
     "name": "Durable",
     "image": "/ia/durable.png",
     "description": "Revolutionize Your Business with AI Efficiency",
@@ -79,8 +87,8 @@
     "link": "https://github.com"
   },
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular"],
+    "hastag": "#code #textgeneration",
     "name": "Looka",
     "image": "/ia/looka.png",
     "description": "AI-driven branding: logos, websites, and full identity kits.",
@@ -88,11 +96,92 @@
     "link": "https://github.com"
   },
   {
-    "category": "Popular",
-    "hastag": "",
+    "category": ["popular"],
+    "hastag": "#code #textgeneration",
     "name": "GPTGO",
     "image": "/ia/gptgo.png",
     "description": "Unleash AI's power: intuitive, customizable, content-to-code...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#education #e-commerce",
+    "name": "AI LMS",
+    "image": "/ia/ailms.png",
+    "description": "Transform learning with AI: Personalized courses, unlimited...",
+    "pricing": "Paid",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#education #low-code/no-code #ai agents",
+    "name": "Plumb",
+    "image": "/ia/plumb.png",
+    "description": "Accelerate AI development with collaborative, no-code visual...",
+    "pricing": "Contact for Pricing",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#education #health #teachers",
+    "name": "mapEDU",
+    "image": "/ia/mapedu.jpg",
+    "description": "AI-powered curriculum optimization and exam analysis for healthcare...",
+    "pricing": "Contact for Pricing",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#e-commerce #customer support #ai chatbots",
+    "name": "Supermoon",
+    "image": "/ia/supermoon.png",
+    "description": "Streamline your team's communication and customer...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#website builders #low-code/no-code",
+    "name": "B12",
+    "image": "/ia/b12.png",
+    "description": "Generate a personalized AI website in 60 seconds",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#image generators #workflows #writing generators",
+    "name": "Anakin.ai",
+    "image": "/ia/anakinai.jpg",
+    "description": "One-Stop AI App Platform, experience 1000+ AI Apps! Including...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#marketing #research #sales",
+    "name": "Osum",
+    "image": "/ia/osum.png",
+    "description": "Harness AI for instant market analysis, strategic insights, and...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#personal assistant #human resources",
+    "name": "AIApply",
+    "image": "/ia/aiapply.png",
+    "description": "Your AI-powered job search assistant with personalized...",
+    "pricing": "Free",
+    "link": "https://github.com"
+  },
+  {
+    "category": ["featured"],
+    "hastag": "#marketing #education #personal assistant",
+    "name": "Charlie Lounge",
+    "image": "/ia/charlie-lounge.png",
+    "description": "Enhance productivity and creativity with AI chatbots and elite...",
     "pricing": "Free",
     "link": "https://github.com"
   }

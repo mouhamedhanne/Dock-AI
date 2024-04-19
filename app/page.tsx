@@ -4,7 +4,7 @@ import Tabs from "@/components/Tabs";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="relative">
       <Header />
       <div className="px-6 ">
         <Herotop />

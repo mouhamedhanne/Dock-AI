@@ -20,8 +20,8 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command";
-
 import { Button } from "@/components/ui/button";
+import data from "@/Data.json";
 
 export function SearchHeader() {
   const [open, setOpen] = React.useState(false);
@@ -107,36 +107,58 @@ export function SearchHeader() {
 }
 
 export function SearchHero() {
+  const topicCounts = data.reduce((counts, platform) => {
+    platform.category.forEach((cat) => {
+      counts[cat] = (counts[cat] || 0) + 1;
+    });
+    return counts;
+  }, {});
+
   return (
     <div className="mt-12 text-center">
       <div className="max-w-5xl mx-auto">
-        <div className="flex justify-center space-x-4">
-          <Button variant="ghost" className="border border-input">
+        <div
+          className="lg:flex lg:justify-center grid grid-cols-2 
+          space-x-2 gap-y-3"
+        >
+          {Object.entries(topicCounts).map(([topic, count]) => (
+            <Button variant="ghost" className="border border-input" key={topic}>
+              {topic}
+              <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
+                {count}
+              </span>
+            </Button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+{
+  /**
+<Button variant="ghost" className="border border-input ">
             Marketing
             <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
               23
             </span>
           </Button>
-          <Button variant="ghost" className="border border-input">
-            Création de contenu
+          <Button variant="ghost" className="border border-input ">
+            Design
             <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
               23
             </span>
           </Button>
-          <Button variant="ghost" className="border border-input">
+          <Button variant="ghost" className="border border-input ">
             Productivité
             <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
               23
             </span>
           </Button>
-          <Button variant="ghost" className="border border-input">
+          <Button variant="ghost" className="border border-input ">
             Développement
             <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
               23
             </span>
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
+          </Button> */
 }
