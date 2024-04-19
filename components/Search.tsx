@@ -110,9 +110,11 @@ interface TopicCount {
   [key: string]: number;
 }
 
+//interface typescri
+
 export function SearchHero() {
   const topicCounts = data.reduce<TopicCount>((counts, platform) => {
-    const topics = platform.topics || []; 
+    const topics = platform.topics || [];
     topics.forEach((topic) => {
       counts[topic] = (counts[topic] || 0) + 1;
     });
