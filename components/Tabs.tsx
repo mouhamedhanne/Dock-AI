@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Popular from "@/app/components/data/Popular";
-import Vedette from "@/app/components/data/Vedette";
+import Featured from "@/app/components/data/Featured";
 
 export const Tab = ({ label, isActive, onClick }: any) => {
   return (
@@ -28,8 +28,8 @@ export default function Tabs() {
     case "popular":
       tabContent = <Popular />;
       break;
-    case "vedette":
-      tabContent = <Vedette />;
+    case "featured":
+      tabContent = <Featured />;
       break;
     default:
       tabContent = null;
@@ -39,19 +39,19 @@ export default function Tabs() {
     <div>
       <div className="flex justify-center">
         <Tab
-          label="popular"
+          label="Popular"
           isActive={activeTab === "popular"}
           onClick={() => handleClick("popular")}
         />
         <Tab
-          label="vedette"
-          isActive={activeTab === "vedette"}
-          onClick={() => handleClick("vedette")}
+          label="Featured"
+          isActive={activeTab === "featured"}
+          onClick={() => handleClick("featured")}
         />
       </div>
       <div className="mt-4">
         {activeTab === "popular" && <Popular />}
-        {activeTab === "vedette" && <Vedette />}
+        {activeTab === "featured" && <Featured />}
       </div>
     </div>
   );
