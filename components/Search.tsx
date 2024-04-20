@@ -106,10 +106,17 @@ export function SearchHeader() {
   );
 }
 
+interface TopicCount {
+  [key: string]: number;
+}
+
+//interface typescri
+
 export function SearchHero() {
-  const topicCounts = data.reduce((counts, platform) => {
-    platform.category.forEach((cat) => {
-      counts[cat] = (counts[cat] || 0) + 1;
+  const topicCounts = data.reduce<TopicCount>((counts, platform) => {
+    const topics = platform.topics || [];
+    topics.forEach((topic) => {
+      counts[topic] = (counts[topic] || 0) + 1;
     });
     return counts;
   }, {});
