@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import {
   CalendarIcon,
@@ -21,10 +20,45 @@ import {
   CommandShortcut,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
-import data from "@/Data.json";
+import { Input } from "@/components/ui/input";
+import dataJson from "@/Data.json";
+import { Search } from "lucide-react";
+import Link from "next/link";
+
+interface IDataItem {
+  category: string[];
+  topics: string[];
+  hastag: string;
+  name: string;
+  image: string;
+  description: string;
+  pricing: string;
+  link: string;
+}
 
 export function SearchHeader() {
   const [open, setOpen] = React.useState(false);
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [searchResults, setSearchResults] = React.useState<IDataItem[]>([]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+
+    const results = dataJson.filter(
+      (item: IDataItem) =>
+        item.name.toLowerCase().includes(value.toLowerCase()) ||
+        item.category.some((cat) =>
+          cat.toLowerCase().includes(value.toLowerCase())
+        ) ||
+        (item.topics &&
+          item.topics.some((topic) =>
+            topic.toLowerCase().includes(value.toLowerCase())
+          )) ||
+        item.hastag.toLowerCase().includes(value.toLowerCase())
+    );
+    setSearchResults(results);
+  };
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -65,10 +99,75 @@ export function SearchHeader() {
         </button>
       </div>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <div className="flex items-center border-b px-3">
+          <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+          <Input
+            placeholder="Type a command or search..."
+            value={searchTerm}
+            onChange={handleInputChange}
+            className="flex h-11 w-full rounded-md bg-transparent py-3 text-sm 
+            outline-none placeholder:text-muted-foreground border-none 
+            disabled:cursor-not-allowed disabled:opacity-50"
+          />
+        </div>
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Suggestions">
+          {searchResults.length > 0 ? (
+            <CommandGroup heading="Suggestions">
+              {searchResults.map((result, index) => (
+                <CommandItem key={index}>
+                  <Link href={result.link}>
+                    <span>{result.name}</span>
+                  </Link>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          ) : (
+            <CommandEmpty>No results found</CommandEmpty>
+          )}
+          <CommandSeparator />
+        </CommandList>
+      </CommandDialog>
+    </>
+  );
+}
+
+interface TopicCount {
+  [key: string]: number;
+}
+
+export function SearchHero() {
+  const topicCounts = dataJson.reduce<TopicCount>((counts, platform) => {
+    const topics = platform.topics || [];
+    topics.forEach((topic) => {
+      counts[topic] = (counts[topic] || 0) + 1;
+    });
+    return counts;
+  }, {});
+
+  return (
+    <div className="mt-12 text-center">
+      <div className="max-w-5xl mx-auto">
+        <div
+          className="lg:flex lg:justify-center grid grid-cols-2 
+          space-x-2 gap-y-3"
+        >
+          {Object.entries(topicCounts).map(([topic, count]) => (
+            <Button variant="ghost" className="border border-input" key={topic}>
+              {topic}
+              <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
+                {count}
+              </span>
+            </Button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+{
+  /**
+  <CommandGroup heading="Suggestions">
             <CommandItem>
               <CalendarIcon className="mr-2 h-4 w-4" />
               <span>Calendar</span>
@@ -100,72 +199,5 @@ export function SearchHeader() {
               <CommandShortcut>⌘S</CommandShortcut>
             </CommandItem>
           </CommandGroup>
-        </CommandList>
-      </CommandDialog>
-    </>
-  );
-}
-
-interface TopicCount {
-  [key: string]: number;
-}
-
-//interface typescri
-
-export function SearchHero() {
-  const topicCounts = data.reduce<TopicCount>((counts, platform) => {
-    const topics = platform.topics || [];
-    topics.forEach((topic) => {
-      counts[topic] = (counts[topic] || 0) + 1;
-    });
-    return counts;
-  }, {});
-
-  return (
-    <div className="mt-12 text-center">
-      <div className="max-w-5xl mx-auto">
-        <div
-          className="lg:flex lg:justify-center grid grid-cols-2 
-          space-x-2 gap-y-3"
-        >
-          {Object.entries(topicCounts).map(([topic, count]) => (
-            <Button variant="ghost" className="border border-input" key={topic}>
-              {topic}
-              <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
-                {count}
-              </span>
-            </Button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-{
-  /**
-<Button variant="ghost" className="border border-input ">
-            Marketing
-            <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
-              23
-            </span>
-          </Button>
-          <Button variant="ghost" className="border border-input ">
-            Design
-            <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
-              23
-            </span>
-          </Button>
-          <Button variant="ghost" className="border border-input ">
-            Productivité
-            <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
-              23
-            </span>
-          </Button>
-          <Button variant="ghost" className="border border-input ">
-            Développement
-            <span className="ml-2 p-[4px] bg-black text-white font-bol rounded-full">
-              23
-            </span>
-          </Button> */
+           */
 }
