@@ -6,9 +6,9 @@ import { SearchHeader } from "@/components/Search";
 import { Menu, X } from "lucide-react";
 
 const MENU_ITEMS = [
-  "Find designer",
-  "Designer search",
-  "Inspiration",
+  "Categories AI",
+  "Offres",
+  "Soumettre un AI",
   "Courses",
   "Jobs",
   "Go Pro",
@@ -24,7 +24,9 @@ export default function Header() {
           <ul className="text-sm font-semibold flex space-x-4">
             {MENU_ITEMS.map((item) => (
               <li>
-                <Link href="/">{item}</Link>
+                <Link href="/" className="hover:text-text_primary">
+                  {item}
+                </Link>
               </li>
             ))}
           </ul>
@@ -55,7 +57,7 @@ export default function Header() {
       </div>
       {menuOpen && (
         <div
-          className="md:hidden py-4 px-8 absolute z-10 w-full bg-[#0D1117]
+          className="md:hidden py-4 px-8 absolute z-20 w-full bg-[#0D1117]
           text-white"
         >
           <div className="flex">

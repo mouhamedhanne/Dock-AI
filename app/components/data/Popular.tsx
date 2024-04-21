@@ -56,7 +56,7 @@ export default function Popular() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button variant="outline">More...</Button>
+                {/**<Button variant="outline">More...</Button> */}
                 <Button className="space-x-1">
                   <Link href={platform.link} target="_blank">
                     {platform.name}

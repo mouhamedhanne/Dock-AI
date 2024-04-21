@@ -2,12 +2,13 @@
 import { useState } from "react";
 import Popular from "@/app/components/data/Popular";
 import Featured from "@/app/components/data/Featured";
+import News from "@/app/components/data/News";
 
 export const Tab = ({ label, isActive, onClick }: any) => {
   return (
     <button
-      className={`px-4 py-2 ${
-        isActive ? "bg-blue-500 text-white" : "text-gray-700"
+      className={`px-4 py-2 rounded-[2rem] ${
+        isActive ? "bg-text_primary text-white" : "text-gray-700"
       }`}
       onClick={onClick}
     >
@@ -31,6 +32,9 @@ export default function Tabs() {
     case "featured":
       tabContent = <Featured />;
       break;
+    case "news":
+      tabContent = <News />;
+      break;
     default:
       tabContent = null;
   }
@@ -48,10 +52,16 @@ export default function Tabs() {
           isActive={activeTab === "featured"}
           onClick={() => handleClick("featured")}
         />
+        <Tab
+          label="News"
+          isActive={activeTab === "news"}
+          onClick={() => handleClick("news")}
+        />
       </div>
       <div className="mt-4">
         {activeTab === "popular" && <Popular />}
         {activeTab === "featured" && <Featured />}
+        {activeTab === "news" && <News />}
       </div>
     </div>
   );
