@@ -19,6 +19,7 @@ const config = {
     },
     extend: {
       colors: {
+        text_primary: "#FF4F01",
         custom: {
           black: "var(--color-primary)",
         },

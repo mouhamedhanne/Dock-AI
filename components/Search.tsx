@@ -112,7 +112,7 @@ export function SearchHeader() {
         </div>
         <CommandList>
           {searchResults.length > 0 ? (
-            <CommandGroup heading="Suggestions">
+            <CommandGroup heading="Results">
               {searchResults.map((platform, index) => (
                 <CommandItem key={index}>
                   <span>{platform.name}</span>
@@ -123,6 +123,7 @@ export function SearchHeader() {
             <CommandEmpty>No results found</CommandEmpty>
           )}
           <CommandSeparator />
+          <CommandGroup heading="Suggestions"></CommandGroup>
         </CommandList>
       </CommandDialog>
     </>
