@@ -27,7 +27,7 @@ import Link from "next/link";
 
 interface IDataItem {
   category: string[];
-  topics: string[];
+  topics?: string[];
   hastag: string;
   name: string;
   image: string;
@@ -113,11 +113,9 @@ export function SearchHeader() {
         <CommandList>
           {searchResults.length > 0 ? (
             <CommandGroup heading="Suggestions">
-              {searchResults.map((result, index) => (
+              {searchResults.map((platform, index) => (
                 <CommandItem key={index}>
-                  <Link href={result.link}>
-                    <span>{result.name}</span>
-                  </Link>
+                  <span>{platform.name}</span>
                 </CommandItem>
               ))}
             </CommandGroup>
