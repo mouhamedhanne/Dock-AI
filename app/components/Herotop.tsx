@@ -26,7 +26,7 @@ export default function Herotop() {
                   height="36"
                   viewBox="0 0 255 36"
                   fill="none"
-                  className="absolute -bottom-2 left-[-22%] top-11 z-0 text-text_primary
+                  className="absolute top-8 -bottom-2 left-[-22%] lg:top-11 z-0 text-text_primary
                     inline-block w-[150%] "
                 >
                   <path

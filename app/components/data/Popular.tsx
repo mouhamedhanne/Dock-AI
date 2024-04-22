@@ -70,7 +70,12 @@ export default function Popular() {
       </div>
       <div className="flex justify-center mt-4">
         {showCount < popularPlatform.length && (
-          <Button onClick={() => setShowCount(showCount + 3)}>See More</Button>
+          <Button
+            onClick={() => setShowCount(showCount + 3)}
+            className="rounded-[2rem] bg-text_primary hover:bg-text_primary"
+          >
+            See More
+          </Button>
         )}
       </div>
     </div>
