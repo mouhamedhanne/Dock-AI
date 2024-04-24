@@ -59,7 +59,7 @@ export default function Herotop() {
           <div className="max-w-3xl mx-auto">
             <p className="text-lg max-sm:px-4">
               Êtes-vous prêt à libérer tout le potentiel de l'IA pour atteindre
-              l'excellence ? Nexus AI rassemble les meilleures solutions
+              l'excellence ? Dock AI rassemble les meilleures solutions
               d'intelligence artificielle en un seul endroit.
             </p>
           </div>
