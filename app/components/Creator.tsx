@@ -1,24 +1,32 @@
 import Image from "next/image";
 import DockAI from "@/public/images/png/Dock AI.png";
 import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
+import { SmilePlus } from "lucide-react";
 
 export function EvervaultCardDemo() {
   return (
-    <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
-      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+    <div
+      className="border border-black/[0.2] flex 
+      flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]"
+    >
+      <Icon className="absolute h-6 w-6 -top-3 -left-3  text-black" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -left-3  text-black" />
+      <Icon className="absolute h-6 w-6 -top-3 -right-3  text-black" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -right-3  text-black" />
 
       <EvervaultCard text="hover" />
 
-      <h2 className=" text-black mt-4 text-sm font-bold">
-        Hover over this card to reveal an awesome effect. Running out of copy
-        here.
+      <h2 className=" text-black mt-4 text-lg font-extrabold">
+        Mouhamed El Malick Hanne
       </h2>
-      <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
-        Watch me hover
-      </p>
+      <div className="flex">
+        <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
+          React/NextJS developer
+        </p>
+        <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
+          Open source contributor
+        </p>
+      </div>
     </div>
   );
 }
@@ -45,7 +53,7 @@ export default function Creator() {
             plus de 6 applications et 3 formations best-seller en France.
           </p>
           <div className="mt-8">
-            <h3>Pourquoi avoir fait ce projet ?</h3>
+            <h3 className="font-bold">Pourquoi avoir fait ce projet ?</h3>
             <p className="mt-5">
               J'ai créé de nombreuses applications en 2023 et je vais en faire
               encore plus en 2024.
@@ -58,48 +66,44 @@ export default function Creator() {
               J'ai décidé de la commercialiser pour plusieurs raisons :
             </p>
             <ul className="mt-5">
-              <li className="mb-4">Car on me le demande souvent</li>
-              <li className="mb-4">
-                Car je veux créer une communauté de makers francophones
-              </li>
-              <li className="mb-4">
-                Car je veux aider les gens à créer des applications de qualité
-              </li>
-              <li className="mb-4">
-                Car je vois trop de projets qui n'aboutissent pas
-              </li>
-              <li className="">
-                Car je veux offrir une alternative originale aux projets déjà
-                existants
-              </li>
+              <div className="ml-2 mb-4 flex items-center space-x-2">
+                <SmilePlus size="20" className="text-text_primary" />
+                <li>Car on me le demande souvent</li>
+              </div>
+              <div className="ml-2 mb-4 flex items-center space-x-2">
+                <SmilePlus size="20" className="text-text_primary" />
+                <li>Car je veux créer une communauté de makers francophones</li>
+              </div>
+              <div className="ml-2 mb-4 flex items-center space-x-2">
+                <SmilePlus size="20" className="text-text_primary" />
+                <li>
+                  Car je veux aider les gens à créer des applications de qualité
+                </li>
+              </div>
+              <div className="ml-2 mb-4 flex items-center space-x-2">
+                <SmilePlus size="20" className="text-text_primary" />
+                <li>Car je vois trop de projets qui n'aboutissent pas</li>
+              </div>
+              <div className="ml-2 flex items-start space-x-2">
+                <SmilePlus size="20" className="text-text_primary" />
+                <li>
+                  Car je veux offrir une alternative originale aux projets déjà
+                  existants
+                </li>
+              </div>
             </ul>
-            <p className="mt-5">
-              Je suis impatient de voir ce que tu vas créer avec
-            </p>
+            <div className="flex items-start">
+              <p className="mt-5">
+                Je suis impatient savoir ce que tu vas decouvrir avec
+              </p>
+              <Image src={DockAI} alt="Dock AI" width={50} />
+            </div>
           </div>
         </div>
       </div>
       <div className="flex flex-1 justify-end">
-        <EvervaultCard />
+        <EvervaultCardDemo />
       </div>
     </div>
   );
-}
-
-{
-  /**
-<div className="relative transform-gpu overflow-hidden after:absolute after:inset-0 after:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))] group size-fit rounded-2xl border border-white/10 bg-white/5 p-2 pb-4">
-          <div className="relative">
-            <Image
-              src={DockAI}
-              alt="une image"
-              className="absolute inset-0 size-64 scale-110 rounded-xl object-cover blur-xl grayscale saturate-200 transition-all duration-300 group-hover:blur-[32px] group-hover:grayscale-0"
-            />
-            <div className="mt-4 px-2">
-              <div className="font-medium text-white">Mouhamed Hanne</div>
-              <div className="text-white/75">Creator - Developer</div>
-            </div>
-          </div>
-        </div>
- */
 }
