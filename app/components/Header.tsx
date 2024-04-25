@@ -5,7 +5,12 @@ import Logo from "@/components/Logo";
 import { SearchHeader } from "@/components/Search";
 import { Menu, X, Moon, SunMoon } from "lucide-react";
 
-const MENU_ITEMS = ["Categories AI", "Offres", "Soumettre un AI"];
+const MENU_ITEMS = [
+  "Categories AI",
+  "Offres",
+  "Soumettre une AI",
+  "Nous soutenir",
+];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
