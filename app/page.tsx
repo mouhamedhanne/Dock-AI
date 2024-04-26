@@ -4,6 +4,7 @@ import Tabs from "@/components/Tabs";
 import Booking from "@/app/components/Booking";
 import FAQ from "@/app/components/FAQ";
 import Creator from "@/app/components/Creator";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Booking />
         <FAQ />
         <Creator />
+        <Footer />
       </div>
     </main>
   );

@@ -62,7 +62,7 @@ export function SearchHeader() {
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         setOpen((open) => !open);
       }
@@ -94,7 +94,7 @@ export function SearchHeader() {
             hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 
             font-mono text-[10px] font-medium opacity-100 sm:flex"
           >
-            <span className="text-xs">⌘</span>J
+            <span className="text-xs">⌘</span>k
           </kbd>
         </button>
       </div>
