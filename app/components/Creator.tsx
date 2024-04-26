@@ -101,7 +101,7 @@ export default function Creator() {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 justify-end">
+      <div className="flex flex-1 justify-end hidden lg:block">
         <EvervaultCardDemo />
       </div>
     </div>
