@@ -5,8 +5,17 @@ import Booking from "@/app/components/Booking";
 import FAQ from "@/app/components/FAQ";
 import Creator from "@/app/components/Creator";
 import Footer from "@/app/components/Footer";
+import { supabase } from "@/lib/supabase/server";
 
-export default function Home() {
+const gestSignets = async () => {
+  const { data } = await supabase.from("signet").select();
+  return data;
+};
+
+export default async function Home() {
+  const signets = await gestSignets();
+  console.log(signets);
+
   return (
     <main className="relative">
       <Header />
