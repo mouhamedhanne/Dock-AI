@@ -4,6 +4,8 @@ import Link from "next/link";
 import Logo from "@/components/Logo";
 import { SearchHeader } from "@/components/Search";
 import { Menu, X, Moon, SunMoon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { signOut } from "@/lib/auth/actions";
 
 const MENU_ITEMS = [
   "Categories AI",
@@ -37,19 +39,14 @@ export default function Header() {
         </nav>
         <Logo width={100} className="" />
 
-        {}
         <div className="flex items-center space-x-4">
           <div className="hidden md:block">
             <SearchHeader />
           </div>
           <div className="space-x-3 hidden md:block">
-            <button className="font-bold">Log In</button>
-            <button
-              className="text-sm text-white font-semibold bg-custom-black px-6 py-4 
-          rounded-full shadow-lg"
-            >
-              Sign up
-            </button>
+            <form>
+              <Button formAction={signOut}>Deconnexion</Button>
+            </form>
           </div>
           <button
             className="block md:hidden"
@@ -88,6 +85,18 @@ export default function Header() {
       )}
     </header>
   );
+}
+
+{
+  /**
+ <button className="font-bold">Log In</button>
+            <button
+              className="text-sm text-white font-semibold bg-custom-black px-6 py-4 
+          rounded-full shadow-lg"
+            >
+              Sign up
+            </button>
+ */
 }
 
 {
