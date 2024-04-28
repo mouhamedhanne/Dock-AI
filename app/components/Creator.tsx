@@ -49,53 +49,44 @@ export default function Creator() {
         </h2>
         <div className="">
           <p>
-            Créateur de contenu, formateur et développeur. En 2023, j'ai créé
-            plus de 6 applications et 3 formations best-seller en France.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            placeat, magnam deserunt sit magni veniam! Suscipit omnis qui
           </p>
           <div className="mt-8">
             <h3 className="font-bold">Pourquoi avoir fait ce projet ?</h3>
             <p className="mt-5">
-              J'ai créé de nombreuses applications en 2023 et je vais en faire
-              encore plus en 2024.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <p className="mt-5">
-              Pour ces raisons, j'ai besoin d'une base solide pour mes projets.
-              J'ai donc créé cette template pour moi.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <p className="mt-5">
-              J'ai décidé de la commercialiser pour plusieurs raisons :
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <ul className="mt-5">
               <div className="ml-2 mb-4 flex items-center space-x-2">
                 <SmilePlus size="20" className="text-text_primary" />
-                <li>Car on me le demande souvent</li>
+                <li>Lorem ipsum dolor sit amet consectetur</li>
               </div>
               <div className="ml-2 mb-4 flex items-center space-x-2">
                 <SmilePlus size="20" className="text-text_primary" />
-                <li>Car je veux créer une communauté de makers francophones</li>
+                <li>Lorem ipsum dolor sit amet consectetur</li>
               </div>
               <div className="ml-2 mb-4 flex items-center space-x-2">
                 <SmilePlus size="20" className="text-text_primary" />
-                <li>
-                  Car je veux aider les gens à créer des applications de qualité
-                </li>
+                <li>Lorem ipsum dolor sit amet consectetur</li>
               </div>
               <div className="ml-2 mb-4 flex items-center space-x-2">
                 <SmilePlus size="20" className="text-text_primary" />
-                <li>Car je vois trop de projets qui n'aboutissent pas</li>
+                <li>Lorem ipsum dolor sit amet consectetur</li>
               </div>
               <div className="ml-2 flex items-start space-x-2">
                 <SmilePlus size="20" className="text-text_primary" />
-                <li>
-                  Car je veux offrir une alternative originale aux projets déjà
-                  existants
-                </li>
+                <li>Lorem ipsum dolor sit amet consectetur</li>
               </div>
             </ul>
             <div className="flex items-start">
-              <p className="mt-5">
-                Je suis impatient savoir ce que tu vas decouvrir avec
-              </p>
+              <p className="mt-5">Lorem ipsum dolor sit amet consectetur</p>
               <Image src={DockAI} alt="Dock AI" width={50} />
             </div>
           </div>
