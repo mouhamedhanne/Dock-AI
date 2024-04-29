@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useTransition } from "react";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import { SearchHeader } from "@/components/Search";
-import { Menu, X, Moon, SunMoon } from "lucide-react";
+import { Menu, X, Moon, SunMoon, Loader, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { signOut } from "@/lib/auth/actions";
 
@@ -17,6 +18,13 @@ const MENU_ITEMS = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [lightMode, setLightMode] = useState(false);
+  const [isPending, startTransition] = useTransition();
+
+  const handleSignOut = () => {
+    startTransition(() => {
+      signOut();
+    });
+  };
 
   return (
     <header className="">
@@ -45,7 +53,14 @@ export default function Header() {
           </div>
           <div className="space-x-3 hidden md:block">
             <form>
-              <Button formAction={signOut}>Deconnexion</Button>
+              <Button
+                formAction={handleSignOut}
+                disabled={isPending}
+                className="gap-2"
+              >
+                {isPending ? <Loader className="animate-spin" /> : <LogOut />}
+                Deconnexion
+              </Button>
             </form>
           </div>
           <button
@@ -80,6 +95,16 @@ export default function Header() {
                 <SunMoon className="hover:animate-spin" />
               )}
             </button>
+            <form>
+              <Button
+                formAction={handleSignOut}
+                disabled={isPending}
+                className="gap-2"
+              >
+                {isPending ? <Loader className="animate-spin" /> : <LogOut />}
+                Deconnexion
+              </Button>
+            </form>
           </div>
         </div>
       )}
