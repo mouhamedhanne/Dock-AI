@@ -4,7 +4,7 @@ import { createActionServer } from "@/lib/supabase/actions";
 import { redirect } from "next/navigation";
 
 export const signInWithPassword = async (data: FormData) => {
-  const supabase = createActionServer();
+  const supabase = await createActionServer();
   const { error } = await supabase.auth.signInWithPassword({
     email: data.get("email") as string,
     password: data.get("password") as string,
@@ -17,7 +17,7 @@ export const signInWithPassword = async (data: FormData) => {
 };
 
 export const signOut = async () => {
-  const supabase = createActionServer();
+  const supabase = await createActionServer();
   await supabase.auth.signOut();
   redirect("/auth");
 };
