@@ -6,7 +6,7 @@ import FAQ from "@/app/components/FAQ";
 import Creator from "@/app/components/Creator";
 import Footer from "@/app/components/Footer";
 
-export default async function Home() {
+export default function Home() {
   return (
     <main className="relative">
       <Header />
@@ -24,4 +24,19 @@ export default async function Home() {
       </div>
     </main>
   );
+}
+
+{
+  /**
+   * 
+import { createClientServer } from "@/lib/supabase/server";
+
+const getSignets = async () => {
+  const supabase = createClientServer();
+  const { data } = await supabase.from("signet").select();
+  return data;
+};
+const signets = await getSignets();
+console.log(signets);
+   */
 }
