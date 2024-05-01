@@ -26,7 +26,7 @@ export const signUpWithPassword = async (data: FormData) => {
   if (error) {
     throw error;
   }
-  redirect("/");
+  redirect("/auth/confirmation");
 };
 
 export const signOut = async () => {

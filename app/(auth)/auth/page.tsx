@@ -14,7 +14,7 @@ export default function loginPage() {
 
   const query = useSearchParams().get("query");
 
-  const signIn = query === "signUp";
+  const signin = query === "signin";
 
   const handleSignIn = (formData: FormData) => {
     startTransition(() => {
@@ -33,12 +33,12 @@ export default function loginPage() {
   };
 
   const handleSubmit = (formData: FormData) => {
-    signIn ? handleSignIn(formData) : handleSignUp(formData);
+    signin ? handleSignIn(formData) : handleSignUp(formData);
   };
 
   return (
     <div className="h-screen flex flex-col justify-center items-center">
-      <h2>{signIn ? "Inscription" : "Connexion"}</h2>
+      <h2>{signin ? "Connexion" : "Inscription"}</h2>
       <fieldset className="w-full md:w-2/3 lg:w-1/2" disabled={isPending}>
         <form action={handleSubmit} className="grid grid-cols-1 w-full gap-4">
           <Input
@@ -56,15 +56,15 @@ export default function loginPage() {
           {error && <p className="text-red-500">{error}</p>}
           <Button className="gap-2">
             {isPending ? <Loader className="animate-spin" /> : <LogIn />}
-            {signIn ? "S'Inscrire" : "Se Connecter"}
+            {signin ? "Se Connecter" : "S'Inscrire"}
           </Button>
         </form>
       </fieldset>
       <Link
         className="mt-6 hover:underline"
-        href={signIn ? "/auth?query=signUp" : "/auth?query=signIn"}
+        href={signin ? "/auth?query=signup" : "/auth?query=signin"}
       >
-        {signIn ? "SignUp" : "SignIn"}
+        {signin ? "Pas de compte" : "Vous avez un compte"}
       </Link>
     </div>
   );
